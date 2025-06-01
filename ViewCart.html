@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe3f2;
+      padding: 20px;
+      margin: 0;
+    }
+
+    @font-face {
+      font-family:"StarbsFont";
+      src: url("Freight Sans Black.otf");
+    }
+
+    @font-face {
+      font-family:"Secondary";
+      src: url("Cocogoose-Classic-Medium-trial.ttf");
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+      font-family: 'StarbsFont';
+    }
+
+    ul {
+      max-width: 500px;
+      margin: 20px auto;
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #fff;
+      border: 1px solid #d63384;
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      font-family: 'Secondary';
+      color: #d63384;
+    }
+
+    .cart-controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .cart-controls button {
+      padding: 12px 24px;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Secondary';
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cart-controls button:hover {
+      background-color: #b3226b;
+    }
+
+    /* Toast styles */
+    .toast-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .toast {
+      background-color: #7F55B1;
+      color: #fff;
+      padding: 14px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s, transform 0.4s;
+      font-family: 'Secondary';
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+
+  <ul id="cart-list"></ul>
+
+  <!-- Back and Clear Buttons -->
+  <div class="cart-controls">
+    <button id="backBtn">⬅ Back to Home</button>
+    <button id="clearCartBtn">🗑 Clear Cart</button>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const list = document.getElementById("cart-list");
+
+    if (cart.length === 0) {
+      list.innerHTML = "<li>Your cart is empty.</li>";
+    } else {
+      cart.forEach(coffee => {
+        const li = document.createElement("li");
+        li.textContent = coffee;
+        list.appendChild(li);
+      });
+    }
+
+    // Back to home button
+    document.getElementById("backBtn").addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+
+    // Clear cart button with confirmation
+    document.getElementById("clearCartBtn").addEventListener("click", function () {
+      const confirmClear = confirm("Are you sure you want to delete items?");
+      if (confirmClear) {
+        localStorage.removeItem("cart");
+        showToast("🗑 Cart cleared!");
+        setTimeout(() => location.reload(), 1000);
+      }
+    });
+
+    // Toast function
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "toast";
+      toast.textContent = message;
+
+      document.getElementById("toast-container").appendChild(toast);
+
+      setTimeout(() => toast.classList.add("show"), 10);
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 400);
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

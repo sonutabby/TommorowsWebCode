@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Pink Starbucks</title>
+  <link rel="stylesheet" href="webpage.css">
+  <style>
+    body {
+      background-color: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: "StarbsFont";
+      src: url("Freight\\ Sans\\ Black.otf");
+    }
+
+    @font-face {
+        font-family: "Secondary";
+        src: url(Cocogoose-Classic-Medium-trial.ttf);
+    }
+
+    .contact-header {
+      background-color: #ffe6f0;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 100px;
+      font-family: "StarbsFont";
+    }
+
+    .contact-header h1 {
+      font-size: 2.5rem;
+      color: #cc3366;
+    }
+
+    .contact-header p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-section h2 {
+      color: #cc3366;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      color: #444;
+      font-family: "Secondary";
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: "Secondary";
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+      font-family: "Secondary";
+    }
+
+    .contact-form button {
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: "StarbsFont";
+    }
+
+    .contact-form button:hover {
+      background-color: #b32d59;
+    }
+
+    .social-links {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: #cc3366;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+      font-family: "Secondary";
+    }
+
+    .social-links a:hover {
+      color: #b32d59;
+    }
+
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #ffe6f0;
+      color: #777;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo-container">
+        <img src="starbucks.jpg" alt="Starbucks Logo" class="logo-img" />
+        <a href="#" class="logo-text">STARBUCKS COFFEE</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button id="joinUsBtn" class="btn-outline">Join Us</button>
+        <div class="dropdown">
+          <button class="btn-filled dropdown-toggle">❤︎</button>
+          <div class="dropdown-menu">
+            <a href="ViewCart.html">View Cart</a>
+            <a href="Favorites.html">Favorites</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+   <!-- Contact Header -->
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>Have a question, a compliment, or a pink-tastic idea? </br> We'd love to hear from you!</p>
+  </div>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <h2>Send Us a Message</h2>
+    <form class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Social Media Links -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/pinkstarbucks" target="_blank">
+      <img src="ffb.png" alt="Facebook Icon" /> Facebook
+    </a>
+    <a href="https://www.instagram.com/pinkstarbucks" target="_blank">
+      <img src="fig.png" alt="Instagram Icon" /> Instagram
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Pink Starbucks. Designed with ☕ and 💗.
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join Us</title>
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Fonts */
+    @font-face {
+      font-family: "StarbsFont";
+      src: url("Freight Sans Black.otf");
+    }
+
+    @font-face {
+      font-family: "Secondary";
+      src: url("Cocogoose-Classic-Medium-trial.ttf");
+    }
+
+    /* Fade-in animation */
+    body {
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+      font-family: "Secondary", sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #f9c2e0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      background-color: #fff;
+      max-width: 420px;
+      width: 100%;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin: auto;
+    }
+
+    h2 {
+      font-family: "StarbsFont", sans-serif;
+      color: #d63384;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 100%;
+      max-width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #d63384;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: "Secondary", sans-serif;
+      display: block;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #c61c6e;
+      box-shadow: 0 0 0 3px rgba(198, 28, 110, 0.2);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-family: "StarbsFont", sans-serif;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 12px 20px;
+      transition: background 0.3s ease;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #bf2c75;
+    }
+
+    /* Optional: custom arrow for select */
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: #fff;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23d63384" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 18px;
+      padding-right: 35px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    select option {
+  color: #d63384;
+}
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Join Us</h2>
+    <form id="joinUsForm" action="/submit" method="POST">
+      <label for="name">NAME</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">EMAIL</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+
+      <label for="gender">GENDER</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">MESSAGE</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Tell us why you want to join..."
+        required
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delivery - Pink Starbucks</title>
+  <link rel="stylesheet" href="webpage.css">
+  <style>
+    body {
+      background-color: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+        font-family: "StarbsFont";
+        src: url("Freight\\ Sans\\ Black.otf");
+    }
+
+    .delivery-header {
+      background-color: #ffe6f0;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 100px;
+      font-family: "StarbsFont";
+    }
+
+    .delivery-header h1 {
+      font-size: 2.5rem;
+      color: #cc3366;
+    }
+
+    .delivery-header p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .delivery-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .delivery-text {
+      flex: 1 1 400px;
+    }
+
+    .delivery-text h2 {
+      color: #cc3366;
+      margin-bottom: 15px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .delivery-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .delivery-img {
+      flex: 1 1 300px;
+    }
+
+    .delivery-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .how-it-works {
+      background-color: #ffe6f0;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .how-it-works h2 {
+      color: #cc3366;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .step {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .step h3 {
+      color: #cc3366;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .step p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #ffe6f0;
+      color: #777;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo-container">
+        <img src="starbucks.jpg" alt="Starbucks Logo" class="logo-img" />
+        <a href="#" class="logo-text">STARBUCKS COFFEE</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button id="joinUsBtn" class="btn-outline">Join Us</button>
+        <div class="dropdown">
+          <button class="btn-filled dropdown-toggle">❤︎</button>
+          <div class="dropdown-menu">
+            <a href="ViewCart.html">View Cart</a>
+            <a href="Favorites.html">Favorites</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Delivery Header -->
+  <div class="delivery-header">
+    <h1>Delivery</h1>
+    <p>Bringing your favorite Pink Starbucks drinks and treats right to your door — fast, fresh, and fabulous.</p>
+  </div>
+
+  <!-- Delivery Info Section -->
+  <section class="delivery-section">
+    <div class="delivery-text">
+      <h2>Your Coffee, Delivered with Love</h2>
+      <p>No matter where you are — studying, relaxing, or hosting a cozy get-together — your favorite pink drinks and café snacks are just a few taps away. With our delivery service, we ensure your order arrives warm, fresh, and Instagram-ready.</p>
+      <p>We partner with trusted couriers to bring our unique flavors straight to your doorstep, so you never have to go without your Pink Starbucks fix.</p>
+    </div>
+    <div class="delivery-img">
+      <img src="dvr1.jpg" alt="Delivery scene with coffee and packaging">
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2>How Delivery Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Browse the Menu</h3>
+        <p>Explore our colorful selection of beverages, pastries, and seasonal delights in the app or online.</p>
+      </div>
+      <div class="step">
+        <h3>2. Place Your Order</h3>
+        <p>Select your favorites, customize your drinks, and choose delivery. Pink magic is on its way!</p>
+      </div>
+      <div class="step">
+        <h3>3. Track & Receive</h3>
+        <p>Follow your order in real time, then sip, smile, and snap your pink-perfect moment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Pink Starbucks. Designed with ☕ and 💗.
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
